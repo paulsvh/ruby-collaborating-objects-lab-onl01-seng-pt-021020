@@ -1,12 +1,12 @@
 class MP3Importer
-  attr_reader :filepath
+  attr_reader :path
 
-  def initialize(filepath)
-    @filepath = filepath
+  def initialize(path)
+    @path = path
   end
 
   def files
-
+    @files = Dir["#{path}/*.mp3"]
   end
 
   def import(files)
